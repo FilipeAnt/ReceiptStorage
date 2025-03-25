@@ -1,0 +1,12 @@
+//
+//  ViewAllReceiptsViewModel.swift
+//  CodeChallengeE-conomic
+//
+//  Created by Filipe Almeida António on 25/03/2025.
+//
+
+import Foundation
+
+class ViewAllReceiptsViewModel {
+    
+}

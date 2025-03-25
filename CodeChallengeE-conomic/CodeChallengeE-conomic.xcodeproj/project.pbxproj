@@ -17,6 +17,8 @@
 		BE3EFB2D2D91D84D00FFC273 /* LoadReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB2C2D91D84D00FFC273 /* LoadReceiptViewController.swift */; };
 		BE3EFB2F2D91D85700FFC273 /* LoadReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB2E2D91D85700FFC273 /* LoadReceiptViewModel.swift */; };
 		BE3EFB312D91D88000FFC273 /* LoadReceipt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3EFB302D91D88000FFC273 /* LoadReceipt.storyboard */; };
+		BE3EFB332D9272E700FFC273 /* ViewAllReceiptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB322D9272E700FFC273 /* ViewAllReceiptsViewController.swift */; };
+		BE3EFB352D9272F300FFC273 /* ViewAllReceiptsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB342D9272F300FFC273 /* ViewAllReceiptsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		BE3EFB2C2D91D84D00FFC273 /* LoadReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadReceiptViewController.swift; sourceTree = "<group>"; };
 		BE3EFB2E2D91D85700FFC273 /* LoadReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadReceiptViewModel.swift; sourceTree = "<group>"; };
 		BE3EFB302D91D88000FFC273 /* LoadReceipt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadReceipt.storyboard; sourceTree = "<group>"; };
+		BE3EFB322D9272E700FFC273 /* ViewAllReceiptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllReceiptsViewController.swift; sourceTree = SOURCE_ROOT; };
+		BE3EFB342D9272F300FFC273 /* ViewAllReceiptsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllReceiptsViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		BE3EFB2B2D91D79100FFC273 /* ViewAllReceipts */ = {
 			isa = PBXGroup;
 			children = (
+				BE3EFB322D9272E700FFC273 /* ViewAllReceiptsViewController.swift */,
+				BE3EFB342D9272F300FFC273 /* ViewAllReceiptsViewModel.swift */,
 			);
 			path = ViewAllReceipts;
 			sourceTree = "<group>";
@@ -175,6 +181,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3EFB352D9272F300FFC273 /* ViewAllReceiptsViewModel.swift in Sources */,
+				BE3EFB332D9272E700FFC273 /* ViewAllReceiptsViewController.swift in Sources */,
 				BE3EFB292D91CDAA00FFC273 /* Receipt.swift in Sources */,
 				BE3EFB182D91CD9100FFC273 /* ViewController.swift in Sources */,
 				BE3EFB2D2D91D84D00FFC273 /* LoadReceiptViewController.swift in Sources */,
