@@ -11,26 +11,114 @@
         <!--Load Receipt View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="LoadReceiptViewController" customModule="CodeChallengeE_conomic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoadReceiptViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="LoadReceiptViewController" customModule="CodeChallengeE_conomic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdp-B8-6zP">
-                                <rect key="frame" x="34" y="102" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRW-OC-ven">
-                                <rect key="frame" x="34" y="145" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cqv-18-2CZ">
+                                <rect key="frame" x="20" y="78.999999999999972" width="353" height="489.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DSk-NI-d6I">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="190.33333333333334"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add receipt image:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdp-B8-6zP">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_image_icon" translatesAutoresizingMaskIntoConstraints="NO" id="pRW-OC-ven">
+                                                <rect key="frame" x="0.0" y="40.333333333333329" width="353" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="sDd-HB-1cx"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dxv-yc-W9X">
+                                        <rect key="frame" x="0.0" y="210.33333333333331" width="353" height="90.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfx-dd-Cpk">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vfT-Wo-lv8">
+                                                <rect key="frame" x="0.0" y="41" width="353" height="50"/>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HpC-9B-GpG">
+                                        <rect key="frame" x="0.0" y="320.66666666666669" width="353" height="74.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngV-8T-3NN">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GgN-dw-EkJ">
+                                                <rect key="frame" x="0.0" y="40.333333333333314" width="353" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UWB-Ln-qPY">
+                                        <rect key="frame" x="0.0" y="415" width="353" height="74.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select currency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMa-bE-aWn">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zcx-zB-ZBT">
+                                                <rect key="frame" x="0.0" y="40.333333333333371" width="353" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyd-5O-adN">
+                                <rect key="frame" x="20" y="748" width="353" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Qmt-uJ-GfG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add receipt"/>
+                                <connections>
+                                    <action selector="addReceiptBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6GV-qB-hSX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dyd-5O-adN" secondAttribute="bottom" constant="20" id="JWB-vd-Mgo"/>
+                            <constraint firstItem="dyd-5O-adN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cqv-18-2CZ" secondAttribute="bottom" constant="30" id="Pbw-Aa-WkS"/>
+                            <constraint firstItem="cqv-18-2CZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="UPa-0k-M0F"/>
+                            <constraint firstAttribute="trailing" secondItem="cqv-18-2CZ" secondAttribute="trailing" constant="20" id="axO-ev-cPG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dyd-5O-adN" secondAttribute="trailing" constant="20" id="cH3-iq-ksj"/>
+                            <constraint firstItem="dyd-5O-adN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="cvS-4U-cUL"/>
+                            <constraint firstItem="cqv-18-2CZ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="gXW-pl-YSn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addReceiptButton" destination="dyd-5O-adN" id="pIm-uX-L9C"/>
+                        <outlet property="addReceiptImgLabel" destination="zdp-B8-6zP" id="Rdd-ix-YH0"/>
+                        <outlet property="addReceiptImgView" destination="pRW-OC-ven" id="hvG-iJ-FoR"/>
+                        <outlet property="dateLabel" destination="lfx-dd-Cpk" id="anP-zX-Hza"/>
+                        <outlet property="datePicker" destination="vfT-Wo-lv8" id="BNP-Di-7xP"/>
+                        <outlet property="selectCurrencyLabel" destination="QMa-bE-aWn" id="qK5-Zm-pDj"/>
+                        <outlet property="selectCurrencyTextfield" destination="zcx-zB-ZBT" id="GnN-VH-29D"/>
+                        <outlet property="totalAmountLabel" destination="ngV-8T-3NN" id="Zcd-OQ-fdQ"/>
+                        <outlet property="totalAmountTextfield" destination="GgN-dw-EkJ" id="geu-a6-apm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -38,6 +126,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add_image_icon" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

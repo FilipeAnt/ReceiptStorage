@@ -8,9 +8,9 @@
 import Foundation
 import CoreData
 
-class Receipt: NSManagedObject {
-    @NSManaged var imageData: Data?
-    @NSManaged var date: Date?
-    @NSManaged var totalAmount: Double
-    @NSManaged var currency: String?
+struct Receipt: Codable {
+    let imageData: Data?
+    let date: Date?
+    let totalAmount: Double
+    let currency: String?
 }

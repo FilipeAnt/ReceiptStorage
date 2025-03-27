@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="height" constant="50" id="zSC-rt-hIl"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Load receipt"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add new receipt"/>
                                 <connections>
                                     <action selector="receiptLoadPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sic-ns-Q3M"/>
                                 </connections>
@@ -40,11 +40,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtQ-Ii-ne9">
+                                <rect key="frame" x="20" y="678" width="353" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="U4d-v5-YcU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="View uploaded receipts"/>
+                                <connections>
+                                    <action selector="ViewUploadedReceiptsBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P9g-6G-Rrc"/>
+                                    <action selector="receiptLoadPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xbM-r1-8IS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="5rW-gy-8Ni" firstAttribute="top" secondItem="AtQ-Ii-ne9" secondAttribute="bottom" constant="20" id="5qt-jN-3Lu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AtQ-Ii-ne9" secondAttribute="trailing" constant="20" id="Bkx-5b-tHk"/>
                             <constraint firstItem="Vug-59-MU5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pw5-5V-6Sk"/>
+                            <constraint firstItem="AtQ-Ii-ne9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RUR-LU-lYz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5rW-gy-8Ni" secondAttribute="bottom" constant="20" id="SSG-th-mEU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5rW-gy-8Ni" secondAttribute="trailing" constant="20" id="Xld-R8-7Fq"/>
                             <constraint firstItem="5rW-gy-8Ni" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Yca-Za-gRf"/>
@@ -56,6 +71,7 @@
                     <connections>
                         <outlet property="receiptIconImg" destination="Vug-59-MU5" id="C0C-Su-vRa"/>
                         <outlet property="receiptLoadBtn" destination="5rW-gy-8Ni" id="riT-nI-V7O"/>
+                        <outlet property="viewUploadedReceiptsBtn" destination="AtQ-Ii-ne9" id="mAb-KY-Ghg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -11,8 +11,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet weak var receiptLoadBtn: UIButton!
     @IBOutlet weak var receiptIconImg: UIImageView!
-    var context: NSManagedObjectContext! // Assume this is initialized elsewhere
-
+    @IBOutlet weak var viewUploadedReceiptsBtn: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,34 +21,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBAction func receiptLoadPressed(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        imagePicker.allowsEditing = false
-        present(imagePicker, animated: true, completion: nil)
+        Router.shared.route(to: .addNewReceipt, navigation: self.navigationController ?? UINavigationController())
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-         guard let image = info[.originalImage] as? UIImage else {
-             return
-         }
-         
-         saveReceipt(image: image)
-         picker.dismiss(animated: true, completion: nil)
-     }
     
-    func saveReceipt(image: UIImage) {
-          let receipt = Receipt(context: context)
-          receipt.imageData = image.jpegData(compressionQuality: 1.0)
-          receipt.date = Date()
-          receipt.totalAmount = 100.0 // You can set this dynamically or allow user input
-          receipt.currency = "USD"
-          
-          do {
-              try context.save()
-          } catch {
-              print("Failed to save receipt: \(error)")
-          }
-      }
+    @IBAction func ViewUploadedReceiptsBtnPressed(_ sender: Any) {
+        Router.shared.route(to: .viewAllReceipts, navigation: self.navigationController ?? UINavigationController())
+    }
+    
 }
 
