@@ -94,8 +94,8 @@
             filePath = "CodeChallengeE-conomic/LoadReceipt/LoadReceiptViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "addReceiptBtnPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,56 @@
             filePath = "CodeChallengeE-conomic/LoadReceipt/LoadReceiptViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "addReceiptBtnPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "798AA998-662A-4405-B7AC-0706E02AFF7F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CodeChallengeE-conomic/LoadReceipt/LoadReceiptViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "addReceiptBtnPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A6213B7-4F01-419F-92B0-0B64C4F077C0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CodeChallengeE-conomic/LoadReceipt/LoadReceiptViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "addReceiptBtnPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BF5C819-0A21-41C2-90C5-CE032769397A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CodeChallengeE-conomic/LoadReceipt/LoadReceiptViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "addReceiptBtnPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
