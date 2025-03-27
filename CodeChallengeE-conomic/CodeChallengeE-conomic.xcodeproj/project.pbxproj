@@ -78,6 +78,7 @@
 		BE3EFB122D91CD9100FFC273 /* CodeChallengeE-conomic */ = {
 			isa = PBXGroup;
 			children = (
+				BE60BD2E2D960ACE004F13FC /* UnitTests */,
 				BE60BD2D2D960A7D004F13FC /* Controllers */,
 				BE3EFB362D9502D800FFC273 /* Routing */,
 				BE3EFB272D91CD9E00FFC273 /* Entities */,
@@ -154,6 +155,13 @@
 				BE60BD2C2D9609CF004F13FC /* MainViewController */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BE60BD2E2D960ACE004F13FC /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
