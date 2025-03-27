@@ -6,12 +6,50 @@
 //
 
 import UIKit
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
+    var window: UIWindow?
+    
+    // MARK: - Core Data stack
+    
+    // The persistent container to manage the Core Data model
+    lazy var persistentContainer: NSPersistentContainer = {
+        // Change the model name ("ExpenseReceiptApp") to match the name of your data model
+        let container = NSPersistentContainer(name: "ExpenseReceiptApp")
+        container.loadPersistentStores { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        }
+        return container
+    }()
+    
+    // MARK: - Core Data Saving support
+    
+    func saveContext() {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
+    
+    // MARK: - App Life Cycle Methods
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        // Save data when the app is about to terminate
+        saveContext()
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

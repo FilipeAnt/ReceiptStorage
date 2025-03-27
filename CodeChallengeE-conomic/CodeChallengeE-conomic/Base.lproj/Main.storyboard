@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ENR-QZ-Hgy">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="receipt_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Vug-59-MU5">
-                                <rect key="frame" x="76.666666666666686" y="109" width="240" height="128"/>
+                                <rect key="frame" x="76.666666666666686" y="153" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="LIf-tL-isI"/>
                                     <constraint firstAttribute="width" constant="240" id="yra-UB-kXe"/>
@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receipt Storage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="In2-Hc-Bg6">
-                                <rect key="frame" x="100.33333333333333" y="297" width="192.33333333333337" height="33.666666666666686"/>
+                                <rect key="frame" x="100.33333333333333" y="341" width="192.33333333333337" height="33.666666666666686"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -68,6 +68,7 @@
                             <constraint firstItem="In2-Hc-Bg6" firstAttribute="top" secondItem="Vug-59-MU5" secondAttribute="bottom" constant="60" id="qyT-oH-JPT"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="HOf-P6-eVN"/>
                     <connections>
                         <outlet property="receiptIconImg" destination="Vug-59-MU5" id="C0C-Su-vRa"/>
                         <outlet property="receiptLoadBtn" destination="5rW-gy-8Ni" id="riT-nI-V7O"/>
@@ -76,10 +77,177 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="-2"/>
+            <point key="canvasLocation" x="-314" y="4"/>
+        </scene>
+        <!--Load Receipt View Controller-->
+        <scene sceneID="DeG-qw-sRe">
+            <objects>
+                <viewController storyboardIdentifier="LoadReceiptViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iNM-ud-ffx" customClass="LoadReceiptViewController" customModule="CodeChallengeE_conomic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yYN-Bn-t39">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XSD-lI-1Y5">
+                                <rect key="frame" x="20" y="78.999999999999972" width="353" height="489.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NK2-pM-dUG">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="190.33333333333334"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add receipt image:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRe-rC-WYL">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_image_icon" translatesAutoresizingMaskIntoConstraints="NO" id="5vt-y7-832">
+                                                <rect key="frame" x="0.0" y="40.333333333333329" width="353" height="150"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="rl4-Pf-Vr8"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vZP-e2-12s">
+                                        <rect key="frame" x="0.0" y="210.33333333333331" width="353" height="90.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeU-aL-6DZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="AmA-6A-NYe">
+                                                <rect key="frame" x="0.0" y="40.333333333333371" width="353" height="50"/>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kMk-VC-xWH">
+                                        <rect key="frame" x="0.0" y="320.66666666666669" width="353" height="74.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ja-0y-ZjZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yiu-Nx-kIT">
+                                                <rect key="frame" x="0.0" y="40.333333333333314" width="353" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xVa-gy-F67">
+                                        <rect key="frame" x="0.0" y="415" width="353" height="74.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select currency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TE7-Q6-LHr">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9nh-qB-SlF">
+                                                <rect key="frame" x="0.0" y="40.333333333333371" width="353" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpS-o8-u8Q">
+                                <rect key="frame" x="20" y="748" width="353" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9dL-i3-RB3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add receipt"/>
+                                <connections>
+                                    <action selector="addReceiptBtnPressed:" destination="iNM-ud-ffx" eventType="touchUpInside" id="gWV-pU-1ln"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jJ1-Ry-Obc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jJ1-Ry-Obc" firstAttribute="trailing" secondItem="vpS-o8-u8Q" secondAttribute="trailing" constant="20" id="9vf-Eq-R1j"/>
+                            <constraint firstItem="vpS-o8-u8Q" firstAttribute="leading" secondItem="jJ1-Ry-Obc" secondAttribute="leading" constant="20" id="XXq-uw-svJ"/>
+                            <constraint firstAttribute="trailing" secondItem="XSD-lI-1Y5" secondAttribute="trailing" constant="20" id="chp-q6-8hh"/>
+                            <constraint firstItem="XSD-lI-1Y5" firstAttribute="leading" secondItem="jJ1-Ry-Obc" secondAttribute="leading" constant="20" id="hpN-AV-PZh"/>
+                            <constraint firstItem="vpS-o8-u8Q" firstAttribute="top" relation="greaterThanOrEqual" secondItem="XSD-lI-1Y5" secondAttribute="bottom" constant="30" id="mgy-l6-KbT"/>
+                            <constraint firstItem="XSD-lI-1Y5" firstAttribute="top" secondItem="jJ1-Ry-Obc" secondAttribute="top" constant="20" id="sbr-TR-JsL"/>
+                            <constraint firstItem="jJ1-Ry-Obc" firstAttribute="bottom" secondItem="vpS-o8-u8Q" secondAttribute="bottom" constant="20" id="ztd-Rx-NQA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addReceiptButton" destination="vpS-o8-u8Q" id="jHM-ld-8Tw"/>
+                        <outlet property="addReceiptImgLabel" destination="YRe-rC-WYL" id="qoh-3W-d5f"/>
+                        <outlet property="addReceiptImgView" destination="5vt-y7-832" id="LZC-0B-2qx"/>
+                        <outlet property="dateLabel" destination="YeU-aL-6DZ" id="UZJ-1c-QsH"/>
+                        <outlet property="datePicker" destination="AmA-6A-NYe" id="6OU-eV-aMr"/>
+                        <outlet property="selectCurrencyLabel" destination="TE7-Q6-LHr" id="gqj-Km-5Tt"/>
+                        <outlet property="selectCurrencyTextfield" destination="9nh-qB-SlF" id="5et-cQ-5U2"/>
+                        <outlet property="totalAmountLabel" destination="6ja-0y-ZjZ" id="lIZ-1u-to0"/>
+                        <outlet property="totalAmountTextfield" destination="yiu-Nx-kIT" id="Mja-fM-6Zt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLv-ok-5XQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="4"/>
+        </scene>
+        <!--View All Receipts View Controller-->
+        <scene sceneID="PZ4-Wz-GzI">
+            <objects>
+                <viewController id="zbN-GA-tI2" customClass="ViewAllReceiptsViewController" customModule="CodeChallengeE_conomic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="chz-ci-Jyl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Esf-o8-abi">
+                                <rect key="frame" x="20" y="79" width="353" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s1f-Bv-xQ3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Esf-o8-abi" firstAttribute="leading" secondItem="s1f-Bv-xQ3" secondAttribute="leading" constant="20" id="Ag1-cn-MCf"/>
+                            <constraint firstItem="s1f-Bv-xQ3" firstAttribute="trailing" secondItem="Esf-o8-abi" secondAttribute="trailing" constant="20" id="LZo-Lr-u99"/>
+                            <constraint firstItem="Esf-o8-abi" firstAttribute="top" secondItem="s1f-Bv-xQ3" secondAttribute="top" constant="20" id="ea8-o5-hzQ"/>
+                            <constraint firstItem="s1f-Bv-xQ3" firstAttribute="bottom" secondItem="Esf-o8-abi" secondAttribute="bottom" constant="20" id="vu4-zD-CXd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="receiptsTableView" destination="Esf-o8-abi" id="vw1-n4-B6i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wQ1-GY-g1A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1364" y="11"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iKY-Ft-W5y">
+            <objects>
+                <navigationController id="ENR-QZ-Hgy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QX9-65-0xz">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Jos-OL-EzX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P1D-6e-33h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1497" y="4"/>
         </scene>
     </scenes>
     <resources>
+        <image name="add_image_icon" width="512" height="512"/>
         <image name="receipt_icon" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

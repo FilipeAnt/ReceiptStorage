@@ -8,9 +8,9 @@
 import Foundation
 import CoreData
 
-struct Receipt: Codable {
-    let imageData: Data?
-    let date: Date?
-    let totalAmount: Double
-    let currency: String?
+struct Receipt {
+    var image: Data // Image in Data format
+    var date: Date
+    var amount: Double
+    var currency: String
 }

@@ -10,16 +10,17 @@
 		BE3EFB142D91CD9100FFC273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB132D91CD9100FFC273 /* AppDelegate.swift */; };
 		BE3EFB162D91CD9100FFC273 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB152D91CD9100FFC273 /* SceneDelegate.swift */; };
 		BE3EFB182D91CD9100FFC273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB172D91CD9100FFC273 /* ViewController.swift */; };
-		BE3EFB1B2D91CD9100FFC273 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BE3EFB1A2D91CD9100FFC273 /* Base */; };
 		BE3EFB1D2D91CD9200FFC273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3EFB1C2D91CD9200FFC273 /* Assets.xcassets */; };
 		BE3EFB202D91CD9200FFC273 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BE3EFB1F2D91CD9200FFC273 /* Base */; };
 		BE3EFB292D91CDAA00FFC273 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB282D91CDAA00FFC273 /* Receipt.swift */; };
 		BE3EFB2D2D91D84D00FFC273 /* LoadReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB2C2D91D84D00FFC273 /* LoadReceiptViewController.swift */; };
 		BE3EFB2F2D91D85700FFC273 /* LoadReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB2E2D91D85700FFC273 /* LoadReceiptViewModel.swift */; };
-		BE3EFB312D91D88000FFC273 /* LoadReceipt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3EFB302D91D88000FFC273 /* LoadReceipt.storyboard */; };
 		BE3EFB332D9272E700FFC273 /* ViewAllReceiptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB322D9272E700FFC273 /* ViewAllReceiptsViewController.swift */; };
 		BE3EFB352D9272F300FFC273 /* ViewAllReceiptsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB342D9272F300FFC273 /* ViewAllReceiptsViewModel.swift */; };
 		BE3EFB382D9502F300FFC273 /* ViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB372D9502F300FFC273 /* ViewControllerProvider.swift */; };
+		BE60BD082D95C6D0004F13FC /* ReceiptModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE60BD062D95C6D0004F13FC /* ReceiptModel.xcdatamodeld */; };
+		BE60BD0F2D95C914004F13FC /* ReceiptEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60BD0D2D95C914004F13FC /* ReceiptEntity+CoreDataClass.swift */; };
+		BE60BD102D95C914004F13FC /* ReceiptEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60BD0E2D95C914004F13FC /* ReceiptEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +35,12 @@
 		BE3EFB282D91CDAA00FFC273 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		BE3EFB2C2D91D84D00FFC273 /* LoadReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadReceiptViewController.swift; sourceTree = "<group>"; };
 		BE3EFB2E2D91D85700FFC273 /* LoadReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadReceiptViewModel.swift; sourceTree = "<group>"; };
-		BE3EFB302D91D88000FFC273 /* LoadReceipt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadReceipt.storyboard; sourceTree = "<group>"; };
 		BE3EFB322D9272E700FFC273 /* ViewAllReceiptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllReceiptsViewController.swift; sourceTree = SOURCE_ROOT; };
 		BE3EFB342D9272F300FFC273 /* ViewAllReceiptsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllReceiptsViewModel.swift; sourceTree = SOURCE_ROOT; };
 		BE3EFB372D9502F300FFC273 /* ViewControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProvider.swift; sourceTree = "<group>"; };
+		BE60BD072D95C6D0004F13FC /* ReceiptModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReceiptModel.xcdatamodel; sourceTree = "<group>"; };
+		BE60BD0D2D95C914004F13FC /* ReceiptEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReceiptEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BE60BD0E2D95C914004F13FC /* ReceiptEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReceiptEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +91,10 @@
 		BE3EFB272D91CD9E00FFC273 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				BE60BD0D2D95C914004F13FC /* ReceiptEntity+CoreDataClass.swift */,
+				BE60BD0E2D95C914004F13FC /* ReceiptEntity+CoreDataProperties.swift */,
 				BE3EFB282D91CDAA00FFC273 /* Receipt.swift */,
+				BE60BD062D95C6D0004F13FC /* ReceiptModel.xcdatamodeld */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -98,7 +104,6 @@
 			children = (
 				BE3EFB2C2D91D84D00FFC273 /* LoadReceiptViewController.swift */,
 				BE3EFB2E2D91D85700FFC273 /* LoadReceiptViewModel.swift */,
-				BE3EFB302D91D88000FFC273 /* LoadReceipt.storyboard */,
 			);
 			path = LoadReceipt;
 			sourceTree = "<group>";
@@ -179,9 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE3EFB1D2D91CD9200FFC273 /* Assets.xcassets in Resources */,
-				BE3EFB312D91D88000FFC273 /* LoadReceipt.storyboard in Resources */,
 				BE3EFB202D91CD9200FFC273 /* Base in Resources */,
-				BE3EFB1B2D91CD9100FFC273 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,8 +199,11 @@
 				BE3EFB332D9272E700FFC273 /* ViewAllReceiptsViewController.swift in Sources */,
 				BE3EFB292D91CDAA00FFC273 /* Receipt.swift in Sources */,
 				BE3EFB382D9502F300FFC273 /* ViewControllerProvider.swift in Sources */,
+				BE60BD0F2D95C914004F13FC /* ReceiptEntity+CoreDataClass.swift in Sources */,
+				BE60BD102D95C914004F13FC /* ReceiptEntity+CoreDataProperties.swift in Sources */,
 				BE3EFB182D91CD9100FFC273 /* ViewController.swift in Sources */,
 				BE3EFB2D2D91D84D00FFC273 /* LoadReceiptViewController.swift in Sources */,
+				BE60BD082D95C6D0004F13FC /* ReceiptModel.xcdatamodeld in Sources */,
 				BE3EFB142D91CD9100FFC273 /* AppDelegate.swift in Sources */,
 				BE3EFB162D91CD9100FFC273 /* SceneDelegate.swift in Sources */,
 				BE3EFB2F2D91D85700FFC273 /* LoadReceiptViewModel.swift in Sources */,
@@ -352,6 +358,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7JDGK5QK6P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CodeChallengeE-conomic/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -379,6 +386,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7JDGK5QK6P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CodeChallengeE-conomic/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -421,6 +429,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BE60BD062D95C6D0004F13FC /* ReceiptModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BE60BD072D95C6D0004F13FC /* ReceiptModel.xcdatamodel */,
+			);
+			currentVersion = BE60BD072D95C6D0004F13FC /* ReceiptModel.xcdatamodel */;
+			path = ReceiptModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BE3EFB082D91CD9100FFC273 /* Project object */;
 }

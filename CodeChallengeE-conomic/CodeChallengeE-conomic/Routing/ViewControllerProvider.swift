@@ -18,19 +18,19 @@ protocol RouterProtocol {
 enum RoutingDestination: RoutingDestinationProtocol {
     case addNewReceipt
     case viewAllReceipts
-    // etc.
 }
 
 class Router: RouterProtocol {
     
     static let shared = Router()
     func route(to destination: RoutingDestination, navigation: UINavigationController) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         switch destination {
         case .addNewReceipt:
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let vc = storyBoard.instantiateViewController(identifier: "LoadReceiptViewController")
             navigation.pushViewController(vc, animated: true)
         case .viewAllReceipts:
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let vc = storyBoard.instantiateViewController(identifier: "LoadReceiptViewController")
             navigation.pushViewController(vc, animated: true)
         }

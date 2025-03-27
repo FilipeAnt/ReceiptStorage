@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class LoadReceiptViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -20,8 +21,13 @@ class LoadReceiptViewController: UIViewController,UIImagePickerControllerDelegat
     @IBOutlet weak var selectCurrencyTextfield: UITextField!
     @IBOutlet weak var addReceiptButton: UIButton!
     
+    var context: NSManagedObjectContext!
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var receipt: Receipt?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        context = appDelegate.persistentContainer.viewContext
         setupAddReceiptImg()
         // Do any additional setup after loading the view.
     }
@@ -46,17 +52,32 @@ class LoadReceiptViewController: UIViewController,UIImagePickerControllerDelegat
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-         guard let image = info[.originalImage] as? UIImage else {
-             return
-         }
-         
-         saveReceipt(image: image)
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            addReceiptImgView.image = image
+                 // Save image as Data
+                 let imageData = image.jpegData(compressionQuality: 0.8)
+                 // Create the receipt object
+                 let newReceipt = Receipt(image: imageData!, date: Date(), amount: 100.0, currency: "USD") // Amount and currency are placeholders
+                 receipt = newReceipt
+             }
          picker.dismiss(animated: true, completion: nil)
      }
     
-    func saveReceipt(image: UIImage) {
-        var receipt = Receipt(imageData: image.jpegData(compressionQuality: 1.0), date: Date(), totalAmount: 100.0, currency: "USD")
-      }
+    func saveReceiptToCoreData(receipt: Receipt) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let newReceipt = NSEntityDescription.insertNewObject(forEntityName: "ReceiptEntity", into: context) as! ReceiptEntity1
+        newReceipt.imageData = receipt.image
+        newReceipt.date = receipt.date
+        newReceipt.amount = receipt.amount
+        newReceipt.currency = receipt.currency
+        
+        do {
+            try context.save()
+        } catch {
+            print("Failed to save receipt: \(error)")
+        }
+    }
     
     
 }
