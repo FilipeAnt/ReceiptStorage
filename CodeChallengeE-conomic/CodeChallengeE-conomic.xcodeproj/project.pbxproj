@@ -78,14 +78,11 @@
 		BE3EFB122D91CD9100FFC273 /* CodeChallengeE-conomic */ = {
 			isa = PBXGroup;
 			children = (
+				BE60BD2D2D960A7D004F13FC /* Controllers */,
 				BE3EFB362D9502D800FFC273 /* Routing */,
-				BE3EFB2B2D91D79100FFC273 /* ViewAllReceipts */,
-				BE3EFB2A2D91D78300FFC273 /* LoadReceipt */,
 				BE3EFB272D91CD9E00FFC273 /* Entities */,
 				BE3EFB132D91CD9100FFC273 /* AppDelegate.swift */,
 				BE3EFB152D91CD9100FFC273 /* SceneDelegate.swift */,
-				BE3EFB172D91CD9100FFC273 /* ViewController.swift */,
-				BE3EFB192D91CD9100FFC273 /* Main.storyboard */,
 				BE3EFB1C2D91CD9200FFC273 /* Assets.xcassets */,
 				BE3EFB1E2D91CD9200FFC273 /* LaunchScreen.storyboard */,
 				BE3EFB212D91CD9200FFC273 /* Info.plist */,
@@ -138,6 +135,25 @@
 				BE60BD2A2D95DBD3004F13FC /* ReceiptCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		BE60BD2C2D9609CF004F13FC /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE3EFB172D91CD9100FFC273 /* ViewController.swift */,
+				BE3EFB192D91CD9100FFC273 /* Main.storyboard */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		BE60BD2D2D960A7D004F13FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE3EFB2A2D91D78300FFC273 /* LoadReceipt */,
+				BE3EFB2B2D91D79100FFC273 /* ViewAllReceipts */,
+				BE60BD2C2D9609CF004F13FC /* MainViewController */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
