@@ -15,12 +15,13 @@
 		BE3EFB292D91CDAA00FFC273 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB282D91CDAA00FFC273 /* Receipt.swift */; };
 		BE3EFB2D2D91D84D00FFC273 /* LoadReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB2C2D91D84D00FFC273 /* LoadReceiptViewController.swift */; };
 		BE3EFB2F2D91D85700FFC273 /* LoadReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB2E2D91D85700FFC273 /* LoadReceiptViewModel.swift */; };
-		BE3EFB332D9272E700FFC273 /* ViewAllReceiptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB322D9272E700FFC273 /* ViewAllReceiptsViewController.swift */; };
-		BE3EFB352D9272F300FFC273 /* ViewAllReceiptsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB342D9272F300FFC273 /* ViewAllReceiptsViewModel.swift */; };
 		BE3EFB382D9502F300FFC273 /* ViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3EFB372D9502F300FFC273 /* ViewControllerProvider.swift */; };
-		BE60BD082D95C6D0004F13FC /* ReceiptModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE60BD062D95C6D0004F13FC /* ReceiptModel.xcdatamodeld */; };
-		BE60BD0F2D95C914004F13FC /* ReceiptEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60BD0D2D95C914004F13FC /* ReceiptEntity+CoreDataClass.swift */; };
-		BE60BD102D95C914004F13FC /* ReceiptEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60BD0E2D95C914004F13FC /* ReceiptEntity+CoreDataProperties.swift */; };
+		BE60BD112D95D095004F13FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3EFB192D91CD9100FFC273 /* Main.storyboard */; };
+		BE60BD1E2D95D4B3004F13FC /* RecipeEntityData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60BD1C2D95D4B3004F13FC /* RecipeEntityData+CoreDataClass.swift */; };
+		BE60BD1F2D95D4B3004F13FC /* RecipeEntityData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60BD1D2D95D4B3004F13FC /* RecipeEntityData+CoreDataProperties.swift */; };
+		BE60BD202D95D542004F13FC /* ReceiptModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = BE60BD192D95D470004F13FC /* ReceiptModel.xcdatamodeld */; };
+		BE60BD222D95D642004F13FC /* ViewAllReceiptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60BD212D95D642004F13FC /* ViewAllReceiptsViewController.swift */; };
+		BE60BD242D95D64E004F13FC /* ViewAllReceiptsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60BD232D95D64E004F13FC /* ViewAllReceiptsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,12 +36,12 @@
 		BE3EFB282D91CDAA00FFC273 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		BE3EFB2C2D91D84D00FFC273 /* LoadReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadReceiptViewController.swift; sourceTree = "<group>"; };
 		BE3EFB2E2D91D85700FFC273 /* LoadReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadReceiptViewModel.swift; sourceTree = "<group>"; };
-		BE3EFB322D9272E700FFC273 /* ViewAllReceiptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllReceiptsViewController.swift; sourceTree = SOURCE_ROOT; };
-		BE3EFB342D9272F300FFC273 /* ViewAllReceiptsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllReceiptsViewModel.swift; sourceTree = SOURCE_ROOT; };
 		BE3EFB372D9502F300FFC273 /* ViewControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProvider.swift; sourceTree = "<group>"; };
-		BE60BD072D95C6D0004F13FC /* ReceiptModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReceiptModel.xcdatamodel; sourceTree = "<group>"; };
-		BE60BD0D2D95C914004F13FC /* ReceiptEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReceiptEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BE60BD0E2D95C914004F13FC /* ReceiptEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReceiptEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BE60BD1A2D95D470004F13FC /* ReceiptModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReceiptModel.xcdatamodel; sourceTree = "<group>"; };
+		BE60BD1C2D95D4B3004F13FC /* RecipeEntityData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeEntityData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BE60BD1D2D95D4B3004F13FC /* RecipeEntityData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeEntityData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BE60BD212D95D642004F13FC /* ViewAllReceiptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllReceiptsViewController.swift; sourceTree = "<group>"; };
+		BE60BD232D95D64E004F13FC /* ViewAllReceiptsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllReceiptsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 				BE3EFB1C2D91CD9200FFC273 /* Assets.xcassets */,
 				BE3EFB1E2D91CD9200FFC273 /* LaunchScreen.storyboard */,
 				BE3EFB212D91CD9200FFC273 /* Info.plist */,
+				BE60BD192D95D470004F13FC /* ReceiptModel.xcdatamodeld */,
 			);
 			path = "CodeChallengeE-conomic";
 			sourceTree = "<group>";
@@ -91,10 +93,9 @@
 		BE3EFB272D91CD9E00FFC273 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				BE60BD0D2D95C914004F13FC /* ReceiptEntity+CoreDataClass.swift */,
-				BE60BD0E2D95C914004F13FC /* ReceiptEntity+CoreDataProperties.swift */,
+				BE60BD1C2D95D4B3004F13FC /* RecipeEntityData+CoreDataClass.swift */,
+				BE60BD1D2D95D4B3004F13FC /* RecipeEntityData+CoreDataProperties.swift */,
 				BE3EFB282D91CDAA00FFC273 /* Receipt.swift */,
-				BE60BD062D95C6D0004F13FC /* ReceiptModel.xcdatamodeld */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -111,8 +112,8 @@
 		BE3EFB2B2D91D79100FFC273 /* ViewAllReceipts */ = {
 			isa = PBXGroup;
 			children = (
-				BE3EFB322D9272E700FFC273 /* ViewAllReceiptsViewController.swift */,
-				BE3EFB342D9272F300FFC273 /* ViewAllReceiptsViewModel.swift */,
+				BE60BD212D95D642004F13FC /* ViewAllReceiptsViewController.swift */,
+				BE60BD232D95D64E004F13FC /* ViewAllReceiptsViewModel.swift */,
 			);
 			path = ViewAllReceipts;
 			sourceTree = "<group>";
@@ -183,6 +184,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE60BD202D95D542004F13FC /* ReceiptModel.xcdatamodeld in Resources */,
+				BE60BD112D95D095004F13FC /* Main.storyboard in Resources */,
 				BE3EFB1D2D91CD9200FFC273 /* Assets.xcassets in Resources */,
 				BE3EFB202D91CD9200FFC273 /* Base in Resources */,
 			);
@@ -195,15 +198,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE3EFB352D9272F300FFC273 /* ViewAllReceiptsViewModel.swift in Sources */,
-				BE3EFB332D9272E700FFC273 /* ViewAllReceiptsViewController.swift in Sources */,
+				BE60BD1E2D95D4B3004F13FC /* RecipeEntityData+CoreDataClass.swift in Sources */,
+				BE60BD242D95D64E004F13FC /* ViewAllReceiptsViewModel.swift in Sources */,
+				BE60BD1F2D95D4B3004F13FC /* RecipeEntityData+CoreDataProperties.swift in Sources */,
+				BE60BD222D95D642004F13FC /* ViewAllReceiptsViewController.swift in Sources */,
 				BE3EFB292D91CDAA00FFC273 /* Receipt.swift in Sources */,
 				BE3EFB382D9502F300FFC273 /* ViewControllerProvider.swift in Sources */,
-				BE60BD0F2D95C914004F13FC /* ReceiptEntity+CoreDataClass.swift in Sources */,
-				BE60BD102D95C914004F13FC /* ReceiptEntity+CoreDataProperties.swift in Sources */,
 				BE3EFB182D91CD9100FFC273 /* ViewController.swift in Sources */,
 				BE3EFB2D2D91D84D00FFC273 /* LoadReceiptViewController.swift in Sources */,
-				BE60BD082D95C6D0004F13FC /* ReceiptModel.xcdatamodeld in Sources */,
 				BE3EFB142D91CD9100FFC273 /* AppDelegate.swift in Sources */,
 				BE3EFB162D91CD9100FFC273 /* SceneDelegate.swift in Sources */,
 				BE3EFB2F2D91D85700FFC273 /* LoadReceiptViewModel.swift in Sources */,
@@ -431,12 +433,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BE60BD062D95C6D0004F13FC /* ReceiptModel.xcdatamodeld */ = {
+		BE60BD192D95D470004F13FC /* ReceiptModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BE60BD072D95C6D0004F13FC /* ReceiptModel.xcdatamodel */,
+				BE60BD1A2D95D470004F13FC /* ReceiptModel.xcdatamodel */,
 			);
-			currentVersion = BE60BD072D95C6D0004F13FC /* ReceiptModel.xcdatamodel */;
+			currentVersion = BE60BD1A2D95D470004F13FC /* ReceiptModel.xcdatamodel */;
 			path = ReceiptModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // The persistent container to manage the Core Data model
     lazy var persistentContainer: NSPersistentContainer = {
         // Change the model name ("ExpenseReceiptApp") to match the name of your data model
-        let container = NSPersistentContainer(name: "ExpenseReceiptApp")
+        let container = NSPersistentContainer(name: "ReceiptModel")
         container.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")

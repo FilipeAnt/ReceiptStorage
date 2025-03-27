@@ -47,7 +47,9 @@ class LoadReceiptViewController: UIViewController,UIImagePickerControllerDelegat
     }
     
     @IBAction func addReceiptBtnPressed(_ sender: Any) {
-        
+        if let receipt = receipt {
+            saveReceiptToCoreData(receipt: receipt)
+        }
     }
     
     
@@ -66,7 +68,7 @@ class LoadReceiptViewController: UIViewController,UIImagePickerControllerDelegat
     func saveReceiptToCoreData(receipt: Receipt) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        let newReceipt = NSEntityDescription.insertNewObject(forEntityName: "ReceiptEntity", into: context) as! ReceiptEntity1
+        let newReceipt = NSEntityDescription.insertNewObject(forEntityName: "RecipeEntityData", into: context) as! RecipeEntityData
         newReceipt.imageData = receipt.image
         newReceipt.date = receipt.date
         newReceipt.amount = receipt.amount
