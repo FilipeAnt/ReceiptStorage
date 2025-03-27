@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReceiptTableViewCell" rowHeight="221" id="dr9-tE-A7h" customClass="ReceiptTableViewCell" customModule="CodeChallengeE_conomic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="620" height="221"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dr9-tE-A7h" id="fsb-un-z7J">
+                <rect key="frame" x="0.0" y="0.0" width="620" height="221"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXV-HN-rHr">
+                        <rect key="frame" x="0.0" y="0.0" width="620" height="221"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WgS-ym-7or">
+                                <rect key="frame" x="0.0" y="0.0" width="420" height="221"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="poF-ba-MGm">
+                                        <rect key="frame" x="0.0" y="0.0" width="420" height="110.66666666666667"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCd-rQ-rQO">
+                                                <rect key="frame" x="0.0" y="0.0" width="40.666666666666664" height="110.66666666666667"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krO-aw-Bf0">
+                                                <rect key="frame" x="40.666666666666657" y="0.0" width="379.33333333333337" height="110.66666666666667"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceo-BS-lgl">
+                                        <rect key="frame" x="0.0" y="110.66666666666669" width="420" height="110.33333333333331"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cu-y6-ynF">
+                                                <rect key="frame" x="0.0" y="0.0" width="64.333333333333329" height="110.33333333333333"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2v-ns-HPH">
+                                                <rect key="frame" x="64.333333333333343" y="0.0" width="355.66666666666663" height="110.33333333333333"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mi0-9f-CK4">
+                                <rect key="frame" x="420" y="0.0" width="200" height="221"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="221" id="d4f-ps-5dY"/>
+                                    <constraint firstAttribute="width" constant="200" id="xlE-bL-rO9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="mXV-HN-rHr" secondAttribute="bottom" id="Ph1-EN-yHq"/>
+                    <constraint firstItem="mXV-HN-rHr" firstAttribute="top" secondItem="fsb-un-z7J" secondAttribute="top" id="SYW-cn-y5C"/>
+                    <constraint firstItem="mXV-HN-rHr" firstAttribute="leading" secondItem="fsb-un-z7J" secondAttribute="leading" id="quF-ax-lva"/>
+                    <constraint firstAttribute="trailing" secondItem="mXV-HN-rHr" secondAttribute="trailing" id="u7m-5Z-Rpp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="amountTitleLabel" destination="9Cu-y6-ynF" id="RKL-OK-WWM"/>
+                <outlet property="amountValueLabel" destination="a2v-ns-HPH" id="FLY-92-ist"/>
+                <outlet property="dateTitleLabel" destination="YCd-rQ-rQO" id="rfv-H6-at3"/>
+                <outlet property="dateValueLabel" destination="krO-aw-Bf0" id="f7y-fy-7DK"/>
+                <outlet property="receiptImageView" destination="mi0-9f-CK4" id="7rO-p1-st8"/>
+            </connections>
+            <point key="canvasLocation" x="-453.43511450381675" y="-10.91549295774648"/>
+        </tableViewCell>
+    </objects>
+</document>

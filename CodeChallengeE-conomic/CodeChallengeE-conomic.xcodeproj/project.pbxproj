@@ -22,6 +22,8 @@
 		BE60BD202D95D542004F13FC /* ReceiptModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = BE60BD192D95D470004F13FC /* ReceiptModel.xcdatamodeld */; };
 		BE60BD222D95D642004F13FC /* ViewAllReceiptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60BD212D95D642004F13FC /* ViewAllReceiptsViewController.swift */; };
 		BE60BD242D95D64E004F13FC /* ViewAllReceiptsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60BD232D95D64E004F13FC /* ViewAllReceiptsViewModel.swift */; };
+		BE60BD292D95DBC9004F13FC /* ReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60BD282D95DBC9004F13FC /* ReceiptCell.swift */; };
+		BE60BD2B2D95DBD3004F13FC /* ReceiptCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE60BD2A2D95DBD3004F13FC /* ReceiptCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		BE60BD1D2D95D4B3004F13FC /* RecipeEntityData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeEntityData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BE60BD212D95D642004F13FC /* ViewAllReceiptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllReceiptsViewController.swift; sourceTree = "<group>"; };
 		BE60BD232D95D64E004F13FC /* ViewAllReceiptsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllReceiptsViewModel.swift; sourceTree = "<group>"; };
+		BE60BD282D95DBC9004F13FC /* ReceiptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCell.swift; sourceTree = "<group>"; };
+		BE60BD2A2D95DBD3004F13FC /* ReceiptCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 		BE3EFB2B2D91D79100FFC273 /* ViewAllReceipts */ = {
 			isa = PBXGroup;
 			children = (
+				BE60BD252D95DBAD004F13FC /* Cells */,
 				BE60BD212D95D642004F13FC /* ViewAllReceiptsViewController.swift */,
 				BE60BD232D95D64E004F13FC /* ViewAllReceiptsViewModel.swift */,
 			);
@@ -124,6 +129,15 @@
 				BE3EFB372D9502F300FFC273 /* ViewControllerProvider.swift */,
 			);
 			path = Routing;
+			sourceTree = "<group>";
+		};
+		BE60BD252D95DBAD004F13FC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BE60BD282D95DBC9004F13FC /* ReceiptCell.swift */,
+				BE60BD2A2D95DBD3004F13FC /* ReceiptCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +201,7 @@
 				BE60BD202D95D542004F13FC /* ReceiptModel.xcdatamodeld in Resources */,
 				BE60BD112D95D095004F13FC /* Main.storyboard in Resources */,
 				BE3EFB1D2D91CD9200FFC273 /* Assets.xcassets in Resources */,
+				BE60BD2B2D95DBD3004F13FC /* ReceiptCell.xib in Resources */,
 				BE3EFB202D91CD9200FFC273 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +221,7 @@
 				BE3EFB382D9502F300FFC273 /* ViewControllerProvider.swift in Sources */,
 				BE3EFB182D91CD9100FFC273 /* ViewController.swift in Sources */,
 				BE3EFB2D2D91D84D00FFC273 /* LoadReceiptViewController.swift in Sources */,
+				BE60BD292D95DBC9004F13FC /* ReceiptCell.swift in Sources */,
 				BE3EFB142D91CD9100FFC273 /* AppDelegate.swift in Sources */,
 				BE3EFB162D91CD9100FFC273 /* SceneDelegate.swift in Sources */,
 				BE3EFB2F2D91D85700FFC273 /* LoadReceiptViewModel.swift in Sources */,

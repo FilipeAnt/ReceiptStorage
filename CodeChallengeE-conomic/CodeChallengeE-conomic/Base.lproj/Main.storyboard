@@ -49,7 +49,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="View uploaded receipts"/>
                                 <connections>
                                     <action selector="ViewUploadedReceiptsBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P9g-6G-Rrc"/>
-                                    <action selector="receiptLoadPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xbM-r1-8IS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XSD-lI-1Y5">
-                                <rect key="frame" x="20" y="78.999999999999972" width="353" height="489.33333333333326"/>
+                                <rect key="frame" x="20" y="79" width="353" height="535.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NK2-pM-dUG">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="190.33333333333334"/>
@@ -134,13 +133,14 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yiu-Nx-kIT">
                                                 <rect key="frame" x="0.0" y="40.333333333333314" width="353" height="34"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xVa-gy-F67">
-                                        <rect key="frame" x="0.0" y="415" width="353" height="74.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="415" width="353" height="120.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select currency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TE7-Q6-LHr">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
@@ -148,13 +148,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9nh-qB-SlF">
-                                                <rect key="frame" x="0.0" y="40.333333333333371" width="353" height="34"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mx-Hu-RXo">
+                                                <rect key="frame" x="0.0" y="40" width="353" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="zfQ-Ry-USt"/>
+                                                </constraints>
+                                            </pickerView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -190,7 +189,7 @@
                         <outlet property="dateLabel" destination="YeU-aL-6DZ" id="UZJ-1c-QsH"/>
                         <outlet property="datePicker" destination="AmA-6A-NYe" id="6OU-eV-aMr"/>
                         <outlet property="selectCurrencyLabel" destination="TE7-Q6-LHr" id="gqj-Km-5Tt"/>
-                        <outlet property="selectCurrencyTextfield" destination="9nh-qB-SlF" id="5et-cQ-5U2"/>
+                        <outlet property="selectCurrencyPickerView" destination="4mx-Hu-RXo" id="XAt-T7-qdE"/>
                         <outlet property="totalAmountLabel" destination="6ja-0y-ZjZ" id="lIZ-1u-to0"/>
                         <outlet property="totalAmountTextfield" destination="yiu-Nx-kIT" id="Mja-fM-6Zt"/>
                     </connections>
@@ -202,7 +201,7 @@
         <!--View All Receipts View Controller-->
         <scene sceneID="PZ4-Wz-GzI">
             <objects>
-                <viewController id="zbN-GA-tI2" customClass="ViewAllReceiptsViewController" customModule="CodeChallengeE_conomic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewAllReceiptsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zbN-GA-tI2" customClass="ViewAllReceiptsViewController" customModule="CodeChallengeE_conomic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="chz-ci-Jyl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,7 +221,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="receiptsTableView" destination="Esf-o8-abi" id="vw1-n4-B6i"/>
+                        <outlet property="receiptsTableView" destination="Esf-o8-abi" id="Xie-i2-NR3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQ1-GY-g1A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

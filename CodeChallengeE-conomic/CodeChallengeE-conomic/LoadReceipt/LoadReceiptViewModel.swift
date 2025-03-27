@@ -7,7 +7,31 @@
 
 
 import Foundation
+import UIKit
+import CoreData
 
 class LoadReceiptViewModel {
+    
+    var context: NSManagedObjectContext!
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    
+    func saveReceipt(receipt: Receipt) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.newBackgroundContext()
+        
+        context.perform {
+            let newReceipt = NSEntityDescription.insertNewObject(forEntityName: "RecipeEntityData", into: context) as! RecipeEntityData
+            newReceipt.imageData = receipt.image
+            newReceipt.date = receipt.date
+            newReceipt.amount = receipt.amount
+            newReceipt.currency = receipt.currency
+            do {
+                try context.save()
+            } catch {
+                print("Failed to save receipt in background: \(error)")
+            }
+        }
+    }
+    
     
 }

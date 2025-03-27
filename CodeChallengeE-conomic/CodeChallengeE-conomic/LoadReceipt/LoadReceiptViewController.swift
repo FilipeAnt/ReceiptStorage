@@ -18,17 +18,21 @@ class LoadReceiptViewController: UIViewController,UIImagePickerControllerDelegat
     @IBOutlet weak var totalAmountLabel: UILabel!
     @IBOutlet weak var totalAmountTextfield: UITextField!
     @IBOutlet weak var selectCurrencyLabel: UILabel!
-    @IBOutlet weak var selectCurrencyTextfield: UITextField!
+    @IBOutlet weak var selectCurrencyPickerView: UIPickerView!
     @IBOutlet weak var addReceiptButton: UIButton!
     
-    var context: NSManagedObjectContext!
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var receipt: Receipt?
+  
+    var imageData: Data?
+    var loadReceiptViewModel: LoadReceiptViewModel?
+    let currencies = ["USD","EUR","GB","INR","JPY","AUD","CAD","CHF","CNY"] // We can add more currencies to the picker
+    var selectedCurrency: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        context = appDelegate.persistentContainer.viewContext
+        datePicker.datePickerMode = .date
+        loadReceiptViewModel = LoadReceiptViewModel()
         setupAddReceiptImg()
+        setupCurrencyPicker()
         // Do any additional setup after loading the view.
     }
     
@@ -38,7 +42,13 @@ class LoadReceiptViewController: UIViewController,UIImagePickerControllerDelegat
         addReceiptImgView.addGestureRecognizer(tap)
     }
     
+    private func setupCurrencyPicker(){
+        selectCurrencyPickerView.delegate = self
+        selectCurrencyPickerView.dataSource = self
+    }
+    
     @objc fileprivate func addImgTapped(){
+        
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
@@ -47,39 +57,41 @@ class LoadReceiptViewController: UIViewController,UIImagePickerControllerDelegat
     }
     
     @IBAction func addReceiptBtnPressed(_ sender: Any) {
-        if let receipt = receipt {
-            saveReceiptToCoreData(receipt: receipt)
+        if let imageData = imageData, let amount = Double(totalAmountTextfield.text ?? ""), let currency = selectedCurrency {
+            let newReceipt = Receipt(image: imageData, date: datePicker.date, amount: amount, currency: currency)
+            loadReceiptViewModel?.saveReceipt(receipt: newReceipt)
         }
     }
-    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             addReceiptImgView.image = image
-                 // Save image as Data
-                 let imageData = image.jpegData(compressionQuality: 0.8)
-                 // Create the receipt object
-                 let newReceipt = Receipt(image: imageData!, date: Date(), amount: 100.0, currency: "USD") // Amount and currency are placeholders
-                 receipt = newReceipt
+            imageData = image.jpegData(compressionQuality: 0.8)
              }
          picker.dismiss(animated: true, completion: nil)
      }
-    
-    func saveReceiptToCoreData(receipt: Receipt) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        let newReceipt = NSEntityDescription.insertNewObject(forEntityName: "RecipeEntityData", into: context) as! RecipeEntityData
-        newReceipt.imageData = receipt.image
-        newReceipt.date = receipt.date
-        newReceipt.amount = receipt.amount
-        newReceipt.currency = receipt.currency
-        
-        do {
-            try context.save()
-        } catch {
-            print("Failed to save receipt: \(error)")
-        }
-    }
-    
-    
+}
+
+extension LoadReceiptViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+           return 1
+       }
+       
+       // Number of rows in the picker (based on number of currencies)
+       func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+           return currencies.count
+       }
+       
+       // MARK: - UIPickerViewDelegate
+       
+       // What to display for each row
+       func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+           return currencies[row]
+       }
+       
+       // Handle when a row is selected
+       func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+           let selectedCurrency = currencies[row]
+           self.selectedCurrency = selectedCurrency
+       }
 }

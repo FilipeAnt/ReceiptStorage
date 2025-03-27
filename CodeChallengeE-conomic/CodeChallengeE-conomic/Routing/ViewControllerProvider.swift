@@ -31,7 +31,7 @@ class Router: RouterProtocol {
             navigation.pushViewController(vc, animated: true)
         case .viewAllReceipts:
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let vc = storyBoard.instantiateViewController(identifier: "LoadReceiptViewController")
+            let vc = storyBoard.instantiateViewController(identifier: "ViewAllReceiptsViewController")
             navigation.pushViewController(vc, animated: true)
         }
     }
